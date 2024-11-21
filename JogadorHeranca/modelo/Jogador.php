@@ -1,6 +1,6 @@
 <?php 
 
-    require_once("IComemoracao");
+    require_once("IComemoracao.php");
 
     Class Jogador implements IComemoracao{
 

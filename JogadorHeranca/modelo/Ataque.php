@@ -1,20 +1,49 @@
-<?php 
+<?php
 
-    require_once("Jogador.php");
+require_once("Jogador.php");
 
-Class Ataque extends Jogador {
+class Ataque extends Jogador
+{
     private $habilidadePenalti;
     private $habilidadeFalta;
-    
 
 
-        public function cobrarPenalti(){
 
-        }
+    public function cobrarPenalti()
+    {
+
+        echo  $this->nome .  " Cobra o Penalti e... ";
+        $possibilidade  = (($this->pontuacaoGeral / 2) + $this->habilidadePenalti / 2);
+
+        $numeroAleatorio = rand(0, 100);
+
         
-        public function cobrarFalta(){
-            
+        
+
+        if ($numeroAleatorio <= $possibilidade) {
+            $this->comemoracao();
+        } else {
+            echo " Que cobrança Horrivel de " . $this->nome . "\n";
         }
+    }
+
+    public function cobrarFalta() {
+        echo  $this->nome .  " Cobra a Falta e... ";
+        $possibilidade  = (($this->pontuacaoGeral / 2) + $this->habilidadeFalta / 2);
+
+        $numeroAleatorio = rand(0, 100);
+
+        
+        
+
+        if ($numeroAleatorio <= $possibilidade) {
+            $this->comemoracao();
+        } else {
+            echo " Que cobrança Horrivel de " . $this->nome . "\n";
+        }
+    }
+
+
     /**
      * Get the value of habilidadePenalti
      */

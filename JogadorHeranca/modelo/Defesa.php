@@ -7,10 +7,35 @@
         private $defenderPenalti;
 
         public function cobrarPenalti(){
+                echo  $this->nome .  " Cobra o Penalti e... ";
+        $possibilidade  = (($this->pontuacaoGeral / 2) + $this->habilidadePenalti / 2);
 
+        $numeroAleatorio = rand(0, 100);
+
+        
+        
+
+        if ($numeroAleatorio <= $possibilidade) {
+            $this->comemoracao();
+        } else {
+            echo " Que cobrança Horrivel de " . $this->nome . "\n";
         }
+        }
+
         public function defenderPenalti(){
-            
+            echo  $this->nome .  " Pula pra defender o Penalti e... ";
+        $possibilidade  = (($this->pontuacaoGeral / 2) + $this->defenderPenalti / 2);
+
+        $numeroAleatorio = rand(0, 100);
+
+        
+        
+
+        if ($numeroAleatorio <= $possibilidade) {
+           echo $this->nome . " defende o penalti!!!\n" ;
+        } else {
+            echo " Que defesa Horrivel de " . $this->nome . "\n";
+        }
         }
         
 

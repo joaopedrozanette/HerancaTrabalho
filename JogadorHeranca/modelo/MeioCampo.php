@@ -8,10 +8,36 @@
 
         public function cobrarEscanteio(){
 
+                echo  $this->nome .  " Cobra o Escanteio e... ";
+                $possibilidade  = (($this->pontuacaoGeral / 2) + $this->habilidadeEscanteio / 2);
+        
+                $numeroAleatorio = rand(0, 100);
+        
+                
+                
+        
+                if ($numeroAleatorio <= $possibilidade) {
+                    echo $this->nome . " Cruza no Pé do atacante que faz o gol de voleio!";
+                } else {
+                    echo " Que cobrança Horrivel de " . $this->nome . "\n";
+                }
+
         }
 
         public function cobrarFalta(){
-
+                echo  $this->nome .  " Cobra a Falta e... ";
+                $possibilidade  = (($this->pontuacaoGeral / 2) + $this->habilidadeFalta / 2);
+        
+                $numeroAleatorio = rand(0, 100);
+        
+                
+                
+        
+                if ($numeroAleatorio <= $possibilidade) {
+                    $this->comemoracao();
+                } else {
+                    echo " Que cobrança Horrivel de " . $this->nome . "\n";
+                }
         }
 
         /**
